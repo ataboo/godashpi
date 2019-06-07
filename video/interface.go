@@ -1,6 +1,7 @@
 package video
 
+import "context"
+
 type Service interface {
-	Start() error
-	Stop() error
+	Start(context.Context) error
 }
