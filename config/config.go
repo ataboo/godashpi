@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-type Config struct {
+type Capture struct {
 	SegmentMils  int
 	SegmentCount int
 	Width        int
@@ -17,7 +17,7 @@ type Config struct {
 	VideoPath    string
 }
 
-func (c *Config) ToArgs() []string {
+func (c *Capture) ToArgs() []string {
 	args := []string{
 		"--segment", strconv.Itoa(c.SegmentMils),
 		"--timeout", "0",
